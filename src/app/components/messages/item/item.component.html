@@ -1,0 +1,11 @@
+<mat-card class="message-item">
+    <mat-card-content class="message-text">
+        <p>{{item.text}}</p>
+    </mat-card-content>
+    <button (click)="this.likeItem(item.id)" matTooltip="Нравится" mat-button>
+        <mat-icon class="item-icon" [ngClass]="{'active': this.currentUserLike(item.id) >= 0}" matBadge="{{item.likes}}" matBadgePosition="after" matBadgeColor="accent">favorite</mat-icon>
+    </button>
+    <button (click)="this.removeItem(item.id)" matTooltip="Удалить" mat-button>
+      <mat-icon class="item-icon">delete</mat-icon>
+  </button>
+</mat-card>

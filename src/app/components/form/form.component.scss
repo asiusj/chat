@@ -1,0 +1,10 @@
+.chat-form {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.chat-form > *:not(button) {
+  width: 100%;
+  margin-bottom: 24px;
+}

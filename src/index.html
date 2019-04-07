@@ -7,8 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>
 </body>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCezttae5JR-bvpEQdhlEcPEev27S6CSlA",
+    authDomain: "chat-asiusj.firebaseapp.com",
+    databaseURL: "https://chat-asiusj.firebaseio.com",
+    projectId: "chat-asiusj",
+    storageBucket: "chat-asiusj.appspot.com",
+    messagingSenderId: "401881287054"
+  };
+  firebase.initializeApp(config);
+</script>
 </html>

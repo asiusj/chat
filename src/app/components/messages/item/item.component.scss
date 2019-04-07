@@ -1,0 +1,26 @@
+.message-item button {
+    padding: 0 6px;
+    min-width: auto;
+}
+
+.message-item {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.message-text {
+    width: 100%;
+}
+
+.item-icon {
+    color: #9e9e9e;
+}
+
+.item-icon:hover {
+    color: #707070;
+}
+
+.item-icon.active {
+  color: #212121;
+}
