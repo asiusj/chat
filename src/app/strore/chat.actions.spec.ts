@@ -2,12 +2,8 @@ import { AddNewMessage, ADD_NEW_MESSAGE, AddLike } from './chat.actions';
 import { Message } from '../models/message';
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { MessagesComponent } from '../components/messages/messages.component';
-import { chatReducer } from './chat.reducers';
-import { StoreModule, Store } from '@ngrx/store';
-import { ItemComponent } from '../components/messages/item/item.component';
-import { MatCardModule, MatBadgeModule, MatIconModule } from '@angular/material';
+import { Store } from '@ngrx/store';
 import { ChatState } from './chat.state';
-import { ChatComponent } from '../components/chat/chat.component';
 import { AppModule } from '../app.module';
 
 describe('AddNewMessage', () => {
