@@ -46,7 +46,7 @@ describe('Create MessageComponent and store', () => {
       store.select('chat').subscribe((r: Message[]) => {
         messages = r;
       });
-      console.log('messages current instance: ', messages);
+      // console.log('messages current instance: ', messages);
       messages.map((m) => {
         store.dispatch(new AddLike(m.id));
       });
@@ -58,7 +58,8 @@ describe('Create MessageComponent and store', () => {
       messages.map((m) => {
         const item: HTMLElement = messagesComponent
           .nativeElement.querySelector('app-item[data-itemid="' + m.id + '"]');
-        const span = item.querySelector(':scope span').querySelector(':scope span.mat-badge-content.mat-badge-active');
+        const span = item.querySelector(':scope span')
+          .querySelector(':scope span.mat-badge-content.mat-badge-active');
         expect(messages.filter((mess) => {
           return mess.id === m.id;
         })[0].likes).toEqual(parseInt(span.innerHTML, 10));
