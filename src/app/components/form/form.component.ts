@@ -27,6 +27,7 @@ export class FormComponent implements OnInit {
 
   newMessage() {
     if (this.messageText === '') { return; }
+    console.log(`SENDING REQUEST TO ADD NEW MESSAGE`);
     this.store.dispatch(new AddNewMessage(new Message(this.messageText, 0, this.ids)));
     this.ids++;
     this.messageText = '';

@@ -24,14 +24,17 @@ export class ItemComponent implements OnInit {
   }
 
   removeItem(id: number) {
+    console.log(`SENDING REQUEST TO REMOVE MESSAGE WITH id=${id}`);
     this.store.dispatch(new RemoveMessage(id));
   }
 
   likeItem(id: number) {
     if (this.currentUserLike(id) >= 0) {
+      console.log(`SENDING REQUEST TO REMOVE LIKE FROM MESSAGE WITH id=${id}`);
       this.store.dispatch(new RemoveLike(id));
       this.currentUser.likedItems.splice(this.currentUserLike(id));
     } else {
+      console.log(`SENDING REQUEST TO ADD LIKE TO MESSAGE WITH id=${id}`);
       this.store.dispatch(new AddLike(id));
       this.currentUser.likedItems.push(id);
     }
