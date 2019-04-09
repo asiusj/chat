@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Message } from 'src/app/models/message';
 import { Store } from '@ngrx/store';
 import { ChatState } from 'src/app/strore/chat.state';

@@ -41,6 +41,9 @@ import {
     MatCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    StoreModule
+  ]
 })
 export class AppModule { }
