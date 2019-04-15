@@ -26,6 +26,7 @@ export class ItemComponent implements OnInit {
   removeItem(id: number) {
     console.log(`SENDING REQUEST TO REMOVE MESSAGE WITH id=${id}`);
     this.store.dispatch(new RemoveMessage(id));
+
   }
 
   likeItem(id: number) {
